@@ -167,7 +167,7 @@ class Call(PyTgCalls):
 
     async def speedup_stream(self, chat_id: int, file_path, speed, playing):
         assistant = await group_assistant(self, chat_id)
-        if str(speed) != "0.1":
+        if str(speed) != "1.0":
             base = os.path.basename(file_path)
             chatdir = os.path.join(os.getcwd(), "playback", str(speed))
             if not os.path.isdir(chatdir):
